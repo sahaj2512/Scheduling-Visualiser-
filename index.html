@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Process Scheduling Solver</title>
+</head>
+
+<body>
+    <div class="Merge">
+        <div class="input">
+            <form>
+                <div>
+                    <h1>Input</h1>
+                </div>
+                <div class="algorithm">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algo">
+                        <option>First Come First Serve, FCFS</option>
+                        <option>Shortest Job First, SJF (non-preemptive)</option>
+                        <option>Shortest Remaining Time First, SRTF</option>
+                        <option>Round-Robin, RR</option>
+                        <option>Priority (non-preemptive)</option>
+                        <option>Priority (preemptive)</option>
+                    </select>
+                </div>
+                <div class="Processes">
+                    <label for="Processes">Processes</label>
+                    <input type="text" id="processInput" placeholder="e.g. P1 P2 P3 P4">
+                </div>
+                <div class="arrival-time">
+                    <label for="arrival-time">Arrival Times</label>
+                    <input type="text" id="arrivalInput" placeholder="e.g. 0 2 3 4">
+                </div>
+                <div class="burst-time">
+                    <label for="burst-time">Burst-Time</label>
+                    <input type="text" id="burstInput" placeholder="e.g. 2 5 3 1">
+                </div>
+                <div id="TimeQuantum">
+                    <label for="Timeinput">Time Quantum</label>
+                    <input type="text" id="Timeinput" placeholder="e.g. 2">
+                </div>
+                <div id="Priorities">
+                    <label for="PrioritiesInput">Priorities</label>
+                    <input type="text" id="PrioritiesInput" placeholder=" Lower #=higher priority">
+                </div>
+                <div class="submit">
+                    <button class="solve" type="button">Solve</button>
+                </div>
+            </form>
+        </div>
+        <div class="output">
+            <div id="outhead">
+                <h1>Output</h1>
+                <span id="algoname">FCFS</span>
+            </div>
+            <div id="outputDes">
+                Gantt chart and table will be shown here
+            </div>
+            <div id="GanttChart">
+                <div id="TempAdd"></div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <th id="TempTable"></th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
